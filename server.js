@@ -1,11 +1,12 @@
 const express = require('express');
 const e = require("express");
 const app = new express();
-const path =require("path");
 
 app.use(e.json())
 app.use(e.urlencoded({extended: true}))
-app.use(e.static(path.join(__dirname, 'public')));
+app.use(e.static(__dirname + '/img/'));
+app.set("view engine", "ejs");
+
 let allowCrossDomain = function (req, res, next) {
     res.header('Access-Control-Allow-Origin', "*");
     res.header('Access-Control-Allow-Headers', "*");
@@ -337,7 +338,7 @@ function getPandaCode(){
         "    <div id=\"myModal\" class=\"modal\">\n" +
         "        <div class=\"modal-content\">\n" +
         "            <span class=\"close\" id=\"closeModal\">&times;</span>\n" +
-        "            <img src=\"2024-12-24%2018.48.33.jpg\" alt=\"Панда с бамбуком\">\n" +
+        "            <img src=\"https://nfactorial.onrender.com/panda.jpg\" alt=\"Панда с бамбуком\">\n" +
         "        </div>\n" +
         "    </div>\n" +
         "\n" +
