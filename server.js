@@ -23,7 +23,14 @@ app.post("/news", function (req, res) {
     if (req.body.id == null)
         res.status(500).send("Invalid request");
     else
-        res.status(200).send("Successfully added");
+        res.status(200).send({
+            "id": "1",
+            "category": "Entrepreneur",
+            "author": "Bella Gonza",
+            "readTime": "12 mins",
+            "image": "https://ichef.bbci.co.uk/news/1024/cpsprodpb/5331/live/c7170070-c1cb-11ef-8ca3-5548a50c5056.jpg.webp",
+            "title": "The Rise of New Entrepreneurs"
+        });
 })
 app.get("/news", function (request, response) {
     const type = request.query.type;
