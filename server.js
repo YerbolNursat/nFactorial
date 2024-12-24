@@ -10,6 +10,9 @@ let allowCrossDomain = function (req, res, next) {
     next();
 }
 app.use(allowCrossDomain);
+app.get("/", function (request, response) {
+    response.send("<h1>Nfactorial News</h1>");
+});
 
 app.post("/news", function (req, res) {
     if (req.body.id == null)
