@@ -338,7 +338,7 @@ function getPandaCode(){
         "    <div id=\"myModal\" class=\"modal\">\n" +
         "        <div class=\"modal-content\">\n" +
         "            <span class=\"close\" id=\"closeModal\">&times;</span>\n" +
-        "            <img src=\"https://nfactorial.onrender.com/panda.jpg\" alt=\"Панда с бамбуком\">\n" +
+        "            <img src=\"https://nfactorial.onrender.com/panda.jpg\" alt=\"Панда с бамбуком\" height=\"600\">\n" +
         "        </div>\n" +
         "    </div>\n" +
         "\n" +
