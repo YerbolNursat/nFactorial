@@ -238,9 +238,8 @@ function getAkkuCode(){
         "            display: flex;\n" +
         "            flex-direction: column;\n" +
         "            align-items: center;\n" +
-        "            justify-content: center;\n" +
-        "            height: 100vh;\n" +
-        "            overflow: hidden;\n" +
+        "            justify-content: flex-start;\n" +
+        "            min-height: 100vh;\n" +
         "        }\n" +
         "        .card {\n" +
         "            text-align: center;\n" +
@@ -249,17 +248,7 @@ function getAkkuCode(){
         "            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);\n" +
         "            padding: 40px;\n" +
         "            max-width: 550px;\n" +
-        "            animation: float 4s ease-in-out infinite;\n" +
-        "            position: relative;\n" +
-        "            z-index: 2;\n" +
-        "        }\n" +
-        "        @keyframes float {\n" +
-        "            0%, 100% {\n" +
-        "                transform: translateY(0);\n" +
-        "            }\n" +
-        "            50% {\n" +
-        "                transform: translateY(-10px);\n" +
-        "            }\n" +
+        "            margin: 40px 20px;\n" +
         "        }\n" +
         "        .card img {\n" +
         "            border-radius: 20px;\n" +
@@ -286,10 +275,9 @@ function getAkkuCode(){
         "            color: #ff6f91;\n" +
         "        }\n" +
         "        .balloons {\n" +
-        "            position: absolute;\n" +
-        "            top: -150px;\n" +
-        "            left: 50%;\n" +
-        "            transform: translateX(-50%);\n" +
+        "            position: fixed;\n" +
+        "            top: 0;\n" +
+        "            left: 0;\n" +
         "            width: 100vw;\n" +
         "            height: 100vh;\n" +
         "            z-index: 1;\n" +
@@ -339,7 +327,7 @@ function getAkkuCode(){
         "            animation-delay: 4s;\n" +
         "        }\n" +
         "        .sparkles {\n" +
-        "            position: absolute;\n" +
+        "            position: fixed;\n" +
         "            top: 0;\n" +
         "            left: 0;\n" +
         "            width: 100%;\n" +
@@ -396,7 +384,7 @@ function getAkkuCode(){
         "            <p>Ты достойна самого лучшего в этом мире! 💐</p>\n" +
         "        </div>\n" +
         "        <div class=\"footer\">\n" +
-        "            С наилучшими пожеланиями, <br><span>Viva la vida 💖</span>\n" +
+        "            С наилучшими пожеланиями, <br><span>твои друзья 💖</span>\n" +
         "        </div>\n" +
         "    </div>\n" +
         "</body>\n" +
