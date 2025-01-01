@@ -19,6 +19,9 @@ app.get("/", function (request, response) {
 app.get("/panda", function (request, response) {
     response.send(getPandaCode());
 });
+app.get("/akku", function (request, response) {
+    response.send(getAkkuCode());
+});
 
 app.post("/news", function (req, res) {
     if (req.body.id == null)
@@ -217,6 +220,64 @@ function getRowData() {
             }
         ]
     }
+}
+function getAkkuCode(){
+    return "<!DOCTYPE html>\n" +
+        "<html lang=\"en\">\n" +
+        "<head>\n" +
+        "    <meta charset=\"UTF-8\">\n" +
+        "    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n" +
+        "    <title>Поздравление для Акку</title>\n" +
+        "    <style>\n" +
+        "        body {\n" +
+        "            font-family: Arial, sans-serif;\n" +
+        "            background-color: #fdf6e3;\n" +
+        "            margin: 0;\n" +
+        "            padding: 0;\n" +
+        "            display: flex;\n" +
+        "            flex-direction: column;\n" +
+        "            align-items: center;\n" +
+        "            justify-content: center;\n" +
+        "            height: 100vh;\n" +
+        "        }\n" +
+        "        .card {\n" +
+        "            text-align: center;\n" +
+        "            background: white;\n" +
+        "            border-radius: 10px;\n" +
+        "            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);\n" +
+        "            padding: 20px;\n" +
+        "            max-width: 400px;\n" +
+        "        }\n" +
+        "        .card img {\n" +
+        "            border-radius: 10px;\n" +
+        "            width: 100%;\n" +
+        "            height: auto;\n" +
+        "        }\n" +
+        "        .message {\n" +
+        "            margin-top: 15px;\n" +
+        "            font-size: 1.2em;\n" +
+        "            color: #333;\n" +
+        "        }\n" +
+        "        .footer {\n" +
+        "            margin-top: 20px;\n" +
+        "            font-size: 0.9em;\n" +
+        "            color: #777;\n" +
+        "        }\n" +
+        "    </style>\n" +
+        "</head>\n" +
+        "<body>\n" +
+        "    <div class=\"card\">\n" +
+        "        <img src=\"https://nfactorial.onrender.com/akku.jpg\" alt=\"Акку\">\n" +
+        "        <div class=\"message\">\n" +
+        "            <p>Дорогая Акку!</p>\n" +
+        "            <p>Поздравляем тебя с прошедшим праздником!<br>\n" +
+        "            Пусть каждый день будет наполнен радостью,<br>\n" +
+        "            улыбками и теплом близких людей.</p>\n" +
+        "        </div>\n" +
+        "        <div class=\"footer\">С наилучшими пожеланиями, <br> твои друзья 💖</div>\n" +
+        "    </div>\n" +
+        "</body>\n" +
+        "</html>\n"
 }
 
 function getPandaCode(){
