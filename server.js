@@ -19,8 +19,8 @@ app.get("/", function (request, response) {
 app.get("/panda", function (request, response) {
     response.send(getPandaCode());
 });
-app.get("/akku", function (request, response) {
-    response.send(getAkkuCode());
+app.get("/zarema", function (request, response) {
+    response.send(getZaremaCode());
 });
 
 app.post("/news", function (req, res) {
@@ -155,6 +155,91 @@ function getColumnData() {
     }
 }
 
+function getZaremaCode() {
+    return"<!DOCTYPE html>\n" +
+        "<html lang=\"ru\">\n" +
+        "<head>\n" +
+        "  <meta charset=\"UTF-8\">\n" +
+        "  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n" +
+        "  <title>Good Morning</title>\n" +
+        "  <!-- Подключение шрифта Marcellus -->\n" +
+        "  <link href=\"https://fonts.googleapis.com/css2?family=Marcellus&display=swap\" rel=\"stylesheet\">\n" +
+        "  <style>\n" +
+        "    body {\n" +
+        "      margin: 0;\n" +
+        "      padding: 0;\n" +
+        "      background-color: #f8e9e4;\n" +
+        "      font-family: 'Marcellus', serif;\n" +
+        "      display: flex;\n" +
+        "      justify-content: center;\n" +
+        "      align-items: center;\n" +
+        "      height: 100vh;\n" +
+        "      flex-direction: column;\n" +
+        "    }\n" +
+        "\n" +
+        "    .header {\n" +
+        "      font-size: 2rem;\n" +
+        "      margin-top: 36px;\n" +
+        "    }\n" +
+        "\n" +
+        "    .card {\n" +
+        "      text-align: center;\n" +
+        "      padding: 40px;\n" +
+        "      background-color: #f8e9e4;\n" +
+        "      border: 1px solid #000;\n" +
+        "      display: inline-block;\n" +
+        "      position: relative;\n" +
+        "    }\n" +
+        "\n" +
+        "    .card:before {\n" +
+        "      content: \"\";\n" +
+        "      position: absolute;\n" +
+        "      top: 0;\n" +
+        "      left: 0;\n" +
+        "      right: 0;\n" +
+        "      bottom: 0;\n" +
+        "      border: 2px dashed #000;\n" +
+        "      margin: 10px;\n" +
+        "    }\n" +
+        "\n" +
+        "    .card h1 {\n" +
+        "      font-family: 'Marcellus', serif;\n" +
+        "      font-size: 2.5rem;\n" +
+        "      margin: 0;\n" +
+        "    }\n" +
+        "\n" +
+        "    .card h2 {\n" +
+        "      font-size: 1.2rem;\n" +
+        "      margin: 20px 0 0;\n" +
+        "      font-weight: 700;\n" +
+        "      letter-spacing: 2px;\n" +
+        "    }\n" +
+        "\n" +
+        "    .card .line {\n" +
+        "      width: 50%;\n" +
+        "      height: 1px;\n" +
+        "      background: #000;\n" +
+        "      margin: 20px auto;\n" +
+        "    }\n" +
+        "\n" +
+        "    .card p {\n" +
+        "      font-size: 1rem;\n" +
+        "      margin: 10px 0;\n" +
+        "    }\n" +
+        "  </style>\n" +
+        "</head>\n" +
+        "<body>\n" +
+        "    <div class=\"card\">\n" +
+        "    <h1>The Gift of Good Day</h1>\n" +
+        "    <div class=\"line\"></div>\n" +
+        "    <h2>WISHING YOU A DAY AS BEAUTIFUL AS YOU ARE.</h2>\n" +
+        "  </div>\n" +
+        "    <div class=\"header\">Viva la Vida</div>\n" +
+        "\n" +
+        "</body>\n" +
+        "</html>\n"
+
+}
 function getRowData() {
     return {
         "items": [
@@ -220,175 +305,6 @@ function getRowData() {
             }
         ]
     }
-}
-function getAkkuCode(){
-    return "<!DOCTYPE html>\n" +
-        "<html lang=\"en\">\n" +
-        "<head>\n" +
-        "    <meta charset=\"UTF-8\">\n" +
-        "    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n" +
-        "    <title>Поздравление для Акку</title>\n" +
-        "    <style>\n" +
-        "        @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');\n" +
-        "        body {\n" +
-        "            font-family: 'Pacifico', cursive;\n" +
-        "            background: linear-gradient(to bottom, #ff9a9e, #fad0c4, #fad0c4);\n" +
-        "            margin: 0;\n" +
-        "            padding: 0;\n" +
-        "            display: flex;\n" +
-        "            flex-direction: column;\n" +
-        "            align-items: center;\n" +
-        "            justify-content: flex-start;\n" +
-        "            min-height: 100vh;\n" +
-        "        }\n" +
-        "        .card {\n" +
-        "            text-align: center;\n" +
-        "            background: rgba(255, 255, 255, 0.95);\n" +
-        "            border-radius: 20px;\n" +
-        "            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);\n" +
-        "            padding: 40px;\n" +
-        "            max-width: 550px;\n" +
-        "            margin: 40px 20px;\n" +
-        "        }\n" +
-        "        .card img {\n" +
-        "            border-radius: 20px;\n" +
-        "            width: 100%;\n" +
-        "            height: auto;\n" +
-        "            margin-bottom: 20px;\n" +
-        "            border: 5px solid #ffd1dc;\n" +
-        "        }\n" +
-        "        .message {\n" +
-        "            font-size: 1.8em;\n" +
-        "            color: #333;\n" +
-        "            line-height: 1.6;\n" +
-        "        }\n" +
-        "        .message p {\n" +
-        "            margin: 10px 0;\n" +
-        "        }\n" +
-        "        .footer {\n" +
-        "            margin-top: 25px;\n" +
-        "            font-size: 1.2em;\n" +
-        "            color: #555;\n" +
-        "        }\n" +
-        "        .footer span {\n" +
-        "            font-size: 1.4em;\n" +
-        "            color: #ff6f91;\n" +
-        "        }\n" +
-        "        .balloons {\n" +
-        "            position: fixed;\n" +
-        "            top: 0;\n" +
-        "            left: 0;\n" +
-        "            width: 100vw;\n" +
-        "            height: 100vh;\n" +
-        "            z-index: 1;\n" +
-        "            overflow: hidden;\n" +
-        "        }\n" +
-        "        .balloon {\n" +
-        "            position: absolute;\n" +
-        "            width: 80px;\n" +
-        "            height: 120px;\n" +
-        "            background: radial-gradient(circle, rgba(255,255,255,0.8) 30%, transparent 70%);\n" +
-        "            border-radius: 50% 50% 40% 40%;\n" +
-        "            animation: rise 6s ease-in-out infinite;\n" +
-        "        }\n" +
-        "        @keyframes rise {\n" +
-        "            0% {\n" +
-        "                transform: translateY(600px) rotate(0deg);\n" +
-        "                opacity: 1;\n" +
-        "            }\n" +
-        "            100% {\n" +
-        "                transform: translateY(-100px) rotate(360deg);\n" +
-        "                opacity: 0;\n" +
-        "            }\n" +
-        "        }\n" +
-        "        .balloon:nth-child(1) {\n" +
-        "            left: 5%;\n" +
-        "            background: #ff6f61;\n" +
-        "            animation-delay: 0s;\n" +
-        "        }\n" +
-        "        .balloon:nth-child(2) {\n" +
-        "            left: 25%;\n" +
-        "            background: #ffc107;\n" +
-        "            animation-delay: 1s;\n" +
-        "        }\n" +
-        "        .balloon:nth-child(3) {\n" +
-        "            left: 45%;\n" +
-        "            background: #4caf50;\n" +
-        "            animation-delay: 2s;\n" +
-        "        }\n" +
-        "        .balloon:nth-child(4) {\n" +
-        "            left: 65%;\n" +
-        "            background: #2196f3;\n" +
-        "            animation-delay: 3s;\n" +
-        "        }\n" +
-        "        .balloon:nth-child(5) {\n" +
-        "            left: 85%;\n" +
-        "            background: #9c27b0;\n" +
-        "            animation-delay: 4s;\n" +
-        "        }\n" +
-        "        .sparkles {\n" +
-        "            position: fixed;\n" +
-        "            top: 0;\n" +
-        "            left: 0;\n" +
-        "            width: 100%;\n" +
-        "            height: 100%;\n" +
-        "            pointer-events: none;\n" +
-        "            z-index: 3;\n" +
-        "        }\n" +
-        "        .sparkle {\n" +
-        "            position: absolute;\n" +
-        "            width: 10px;\n" +
-        "            height: 10px;\n" +
-        "            background: radial-gradient(circle, #fff, transparent);\n" +
-        "            animation: sparkle 2s infinite ease-in-out;\n" +
-        "            border-radius: 50%;\n" +
-        "        }\n" +
-        "        @keyframes sparkle {\n" +
-        "            0% {\n" +
-        "                transform: scale(0);\n" +
-        "                opacity: 1;\n" +
-        "            }\n" +
-        "            50% {\n" +
-        "                transform: scale(1.5);\n" +
-        "                opacity: 0.5;\n" +
-        "            }\n" +
-        "            100% {\n" +
-        "                transform: scale(0);\n" +
-        "                opacity: 0;\n" +
-        "            }\n" +
-        "        }\n" +
-        "    </style>\n" +
-        "</head>\n" +
-        "<body>\n" +
-        "    <div class=\"balloons\">\n" +
-        "        <div class=\"balloon\"></div>\n" +
-        "        <div class=\"balloon\"></div>\n" +
-        "        <div class=\"balloon\"></div>\n" +
-        "        <div class=\"balloon\"></div>\n" +
-        "        <div class=\"balloon\"></div>\n" +
-        "    </div>\n" +
-        "    <div class=\"sparkles\">\n" +
-        "        <div class=\"sparkle\" style=\"top: 20%; left: 30%; animation-delay: 0s;\"></div>\n" +
-        "        <div class=\"sparkle\" style=\"top: 40%; left: 70%; animation-delay: 0.5s;\"></div>\n" +
-        "        <div class=\"sparkle\" style=\"top: 60%; left: 50%; animation-delay: 1s;\"></div>\n" +
-        "        <div class=\"sparkle\" style=\"top: 30%; left: 80%; animation-delay: 1.5s;\"></div>\n" +
-        "        <div class=\"sparkle\" style=\"top: 70%; left: 20%; animation-delay: 2s;\"></div>\n" +
-        "    </div>\n" +
-        "    <div class=\"card\">\n" +
-        "        <img src=\"https://nfactorial.onrender.com/akku.png\" alt=\"Акку\">\n" +
-        "        <div class=\"message\">\n" +
-        "            <p>🌟 Дорогая Акку! 🌟</p>\n" +
-        "            <p>Поздравляем тебя с прошедшим праздником! 🎉<br>\n" +
-        "            Пусть каждый день будет наполнен радостью,<br>\n" +
-        "            улыбками и теплом близких людей. 🥰</p>\n" +
-        "            <p>Ты достойна самого лучшего в этом мире! 💐</p>\n" +
-        "        </div>\n" +
-        "        <div class=\"footer\">\n" +
-        "            С наилучшими пожеланиями, <br><span>Viva la vida 💖</span>\n" +
-        "        </div>\n" +
-        "    </div>\n" +
-        "</body>\n" +
-        "</html>\n"
 }
 
 function getPandaCode(){
